@@ -16,12 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import include, url
 from django.conf import settings
-from django.views.generic import TemplateView
+from django.http import HttpResponse
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', TemplateView.as_view(template_name="index.html")),
+    url(r'^$', lambda request: HttpResponse("Hello World", content_type="text/plain")),
 
 ]
 

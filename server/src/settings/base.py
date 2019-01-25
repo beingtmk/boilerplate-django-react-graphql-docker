@@ -168,19 +168,9 @@ SITE_ID = 1
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [os.path.join(APPS_DIR, 'static'), ]
+# STATICFILES_DIRS = [os.path.join(APPS_DIR, 'static'), ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_cdn')
-
-
-# MEDIA CONFIGURATION
-# ------------------------------------------------------------------------------
-# https://docs.djangoproject.com/en/1.10/ref/settings/#media-root
-# https://docs.djangoproject.com/en/1.10/ref/settings/#media-url
-
-MEDIA_URL = "/media/"
-
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media_cdn")
 
 # EMAIL CONFIGURATION
 # ------------------------------------------------------------------------------
