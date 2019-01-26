@@ -5,6 +5,16 @@ volumes:
   postgres_backup_dev: {}
 
 services:
+  node:
+    container_name: node_server
+    build:
+      context: ./client
+      dockerfile: ./docker/development/Dockerfile
+    command: /start.sh
+    volumes:
+      - ./client:/app
+    ports:
+      - "3000:3000"
   django:
     container_name: django_server
     build:
